@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Escaner de puertos python -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PidgK.io</title>
+	<style type="text/css">
+		.diver{
+			color: red;
+			width: 1000px;
+			height: 1000px;
+			border: 2px solid red;
+			border-radius: 2px 2px 2px 2px;
+
+		}
+		ol{
+			background-color: white;
+			width: 300px;
+			margin: 2px;
+
+		}
+		li{
+			background-color: black;
+			border: 1px solid blue;
+			border-radius: 1px 1px 1px 1px;
+			color: darkred;
+		}
+		font{
+			color: green;
+			font-family: monospace;
+		}
+		.lista{
+			width: 800px
+		}
+		.import{
+			color: red;
+			font-family: monospace;
+			font-size: 12pt;
+		}
+		.normal{
+			color: white;
+			font-family: monospace;
+			font-size: 12pt;
+		}
+		.funcion{
+			color: blue;
+			font-family: monospace;
+			font-size: 12pt;
+		}
+		.int{
+			color: orange;
+			font-family: monospace;
+			font-size: 12pt;
+		}
+		.signo{
+			color: magenta;
+			font-family: monospace;
+			font-size: 12pt;
+		}
+		.dowload{
+			color: royalblue;
+			font-family: monospace;
+			font-family: 7pt;
+		}
+
+	</style>
+</head>
+<body bgcolor="black">
+	<div class="diver">
+		<h1 style="margin: 10px; position: relative; left: 35%; top: 0%;">PidGk Blogs</h1>
+		<h2 style="position: relative; top: -1%; left: 2%">Crear un escaner de puertos simple con python3</h2>
+		<p style="position: relative; top: -2%; left: 2%;">
+			Hoy vermos una forma bastante sencilla de crear nuestro propio
+			escaner de puertos.
+			Aqui les dejare un ejemplo de codigo con el funcionamiento del escanner.
+		</p>
+		<font style="position: relative; top: -4%; left: 2%">PY: Python3 code</font>
+		<ol style="position: relative; top: -4%; left: 2%">
+			<li class="lista"><font class="import">import </font><font class="normal">socket</font></li>
+			<li class="lista"><font class="normal">host = <font class="int">"192.168.1.1"</font></font></li>
+			<li class="lista"><font class="import">for </font><font class="normal">port </font><font class="import">in </font><font class="funcion">range(<font class="int">1000</font>):</font></li>
+			<li class="lista"><font class="normal">&nbsp; &nbsp; &nbsp; &nbsp;sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</font></li>
+			<li class="lista"><font class="normal">&nbsp; &nbsp; &nbsp; &nbsp;value = sock.<font class="funcion">connect_ex( (<font class="normal">host, port</font>) )</font></font></li>
+			<li class="lista"><font class="import">&nbsp; &nbsp; &nbsp; &nbsp;if <font class="normal">value <font class="signo">== <font class="int">0<font class="normal">:</font></font></font></font></font></li>
+			<li class="lista"><font class="funcion">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print(<font class="int">"Puerto Abierto", <font class="normal">port</font></font>)</font></li>
+			<li class="lista"><font class="import"> &nbsp; &nbsp; &nbsp; &nbsp;else:</font></li>
+			<li class="lista"><font class="import">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass</font></li>
+		</ol>
+		<a style="position: relative; top: -4%; left: 3%;" href="/6e24d12e5a82cd669ce17b694d605819/python/test.py" class="dowload" download="/6e24d12e5a82cd669ce17b694d605819/python/test.py">Puedes descargar el archivo con el codigo aqui</a>
+		<p style="position: relative; top: -3%; left: 2%">
+			1.Lo primero que hacermos es importar la libreria socket, para poder realizar conexiones remotas.<br>
+			2.Despues definimos la direccion address del host que se le van a escanear los puertos.<br>
+			3.Iniciamos un bucle for con un range en la variable puerto.<br>
+			4.Creamos una variable que almanecera nuestro socket con los modulos<br>de AF_INET para especificar ipv4 y SOCK_STREAM para especificar<br>el protocolo de red TCP/IP.<br>
+			5.Creamos una variable donde el socket se va a conectar a la direccion<br>y el rango de puertos.<br>
+			6 y 7.Con el condicional if verificamos que si la respuesta es correcta<br>nuestro programa diga que el puerto esta abierto.<br>
+			8. Si lo anterios no sucede simplemente se pasa por alto.<br>
+			Que les parecio este pequeño post?, tengo pensado iniciar un proyecto<br>de un escaner de puertos 100% Funcional. Pronto subire videos realizando todo el proceso.<br>
+			Hasta la proxima.
+
+
+		</p>
+	</div>
+</body>
+</html>

